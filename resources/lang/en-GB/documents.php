@@ -10,6 +10,8 @@ return [
     'billing'                   => 'Billing',
     'advanced'                  => 'Advanced',
 
+    'item_price_hidden'         => 'This column is hidden on your :type.',
+
     'actions' => [
         'cancel'                => 'Cancel',
     ],
@@ -87,4 +89,5 @@ return [
         ],
     ],
 
+    'empty_attachments'         => 'There are no files attached to this :type.',
 ];

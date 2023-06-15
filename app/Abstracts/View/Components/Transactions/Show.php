@@ -482,7 +482,7 @@ abstract class Show extends Component
             return $template;
         }
 
-        $transactionTemplate = setting($this->getSettingKey($type, 'template')) ?: 'default';
+        $transactionTemplate = setting($this->getTransactionSettingKey($type, 'template')) ?: 'default';
 
         return $transactionTemplate;
     }
@@ -1113,9 +1113,7 @@ abstract class Show extends Component
             return $textRecurringType;
         }
 
-        $default_key = config('type.transaction.' . $type . '.translation.transactions');
-
-        $translation = $this->getTextFromConfig($type, 'recurring_type', $default_key);
+        $translation = config('type.transaction.' . $type . '.translation.transactions');
 
         if (! empty($translation)) {
             return $translation;
